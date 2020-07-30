@@ -1,4 +1,4 @@
-package com.example.restservice;
+package com.socialNetwork.restservice;
 
 public class Greeting {
 
