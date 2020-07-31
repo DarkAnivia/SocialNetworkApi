@@ -2,9 +2,11 @@ package com.socialNetwork.restservice;
 
 import java.util.Objects;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Entity
 public class User {
 
     private @Id @GeneratedValue Long id;
@@ -12,6 +14,11 @@ public class User {
 	private String pwd;
 
 	User() {}
+
+	User (User user){
+		this.name = user.getName();
+		this.pwd = user.getPwd();
+	}
 
 	User(String name, String pwd) {
 
