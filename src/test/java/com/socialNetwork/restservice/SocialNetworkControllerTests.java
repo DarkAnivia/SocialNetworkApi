@@ -49,7 +49,7 @@ public void registerUserSuccesful() throws Exception
       .contentType(MediaType.APPLICATION_JSON)
       .accept(MediaType.APPLICATION_JSON))
       .andExpect(status().isOk())
-      .andExpect(MockMvcResultMatchers.jsonPath("$.name").exists());
+      .andExpect(MockMvcResultMatchers.content().string("{\"message\": \"User created\"}"));
 }
 
 	@Test

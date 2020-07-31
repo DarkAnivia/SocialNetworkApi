@@ -21,10 +21,10 @@ public class SocialNetworkController {
 	
 
 	@PostMapping("/register")
-	public User registerUser(@RequestBody User user){
+	public String registerUser(@RequestBody User user){
 
 		socialNetworkService.register(user);
-		return new User (user.getName(), user.getPwd());
+		return "{\"message\": \"User created\"}";
 	}
 
 	// @PostMapping("/addFriend")
