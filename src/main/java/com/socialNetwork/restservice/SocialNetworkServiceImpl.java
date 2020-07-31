@@ -10,12 +10,10 @@ public class SocialNetworkServiceImpl implements SocialNetworkService{
     private SocialNetworkRepository socialNetworkRepository;
     
     public boolean register (User user){
-        System.out.print("register");
         if(user.getName().length()<=10 & user.getName().length()>=5){
 
             if(user.getPwd().length()<=12 & user.getPwd().length()>=8){
-                System.out.println("************************everything ok **************************");
-
+        
                 if(!socialNetworkRepository.existsByName(user.getName())){
 
                     socialNetworkRepository.save(new User(user));
