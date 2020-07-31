@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 interface SocialNetworkRepository extends JpaRepository<User, Long> {
 
-    boolean findByName(String name);
+    boolean existsByName(String name);
     
 }
